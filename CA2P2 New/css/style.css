@@ -1,0 +1,136 @@
+body {
+    font-size: 1.3em;
+    overflow-x: hidden;
+}
+
+.accordian-color{
+    background-color: rgb(105, 204, 101)!important;
+}
+
+.Hero-text{
+  color: rgb(105, 204, 101);
+}
+
+
+.navbar-scrolled {
+    background-color: rgb(15, 160, 37)!important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    transition: all 0.5s;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.nav-link {
+    transition: all 0.2s;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    opacity: 0;
+    transition: all 0.5s;
+    height: 4px;
+    width: 100%;
+    background-color: #63ff4b;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+.disable-hover:hover::after {
+    opacity: 0;
+}
+
+.navbar-text-padding {
+    padding-right: 10px;
+}
+
+.card-padding {
+    padding: 50px 30px 100px 30px;
+}
+
+.Accordian-padding {
+  padding: 10px 10px 0px 20px!important;
+}
+
+.Accordian-margin{
+  padding: 0% 20% 7% 20%;
+}
+
+
+section {
+    text-align: left;
+}
+section h1 {
+    font-size: 100px;
+    font-weight: 420;
+    position: absolute;
+    top: 130px;
+    left: 200px;
+
+    opacity: 0;
+    transform: translateY( 43px );
+    animation-name: fade-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+.c-item{
+height: 100vh;
+}
+
+.text-gradient {
+    background: -webkit-linear-gradient(315deg, rgb(40, 223, 153) 0%, #539165 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(15,160,37)!important;
+}
+
+
+.FadeIn{
+    -webkit-animation: FadeIn 1.2s both;
+    -moz-animation: FadeIn 1.2s both;
+    -o-animation: FadeIn 1.2s both;
+    animation: FadeIn 1.2s both;
+}
+
+@-webkit-keyframes FadeIn{
+    0%{
+        opacity: 0;
+        -webkit-transform: translateX(-150px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+.form-control{
+    --bs-border-color: #28DF99!important;
+}
+
+.modal-content{
+    background: white;
+}
+
+.dropdown-menu{
+    background-color: #9bff7b!important;
+}
+
+@media (max-width: 800px) {
+    .featured-text {
+        text-align: center;
+    }
+}

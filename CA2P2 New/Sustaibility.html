@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainbility</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/test.css">
+  <link rel="icon" href="images/icons8-sustainability-48.png">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <a class="navbar-brand" href="index.html"><img class="image-size" src="images/icons8-sustainability-48.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto p-2">
+            <li class="nav-item dropdown navbar-text-padding">
+              <a class="nav-link active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-house"></i>
+                Home
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="index.html#">Home</a></li>
+                <li><a class="dropdown-item" href="#3cards">3 Ways of Sustainbility</a></li>
+                <li><a class="dropdown-item" href="#3tips">How to stay Sustainable</a></li>
+                <li><a class="dropdown-item" href="#Game">Learn More</a></li>
+              </ul>
+            </li>
+              <li class="nav-item navbar-text-padding">
+              <a class="nav-link active" aria-current="page" href="Sustaibility.html"><i class="fa-solid fa-earth-americas"></i> sustainbility</a>
+              </li>
+              <li class="nav-item navbar-text-padding">
+              <a class="nav-link active" aria-current="page" href="Myself.html"><i class="fa-solid fa-person"></i> Myself</a>
+              </li>
+              <li class="nav-item navbar-text-padding">
+                <a class="nav-link active" aria-current="page" href="Form.html"><i class="fa-solid fa-scroll"></i> Form</a>
+              </li>
+          </ul>
+      </div>
+      </nav>
+  </header>
+
+
+  
+  <div class="container mt-5 pt-5">
+    <div class="row">
+      <div class="pb-5">
+        <div class="position-relative interactive-image">
+          <img class="initial-size img-fluid" src="images/Platinum mark buildings.jpg" alt="Interactive Image" id="interactive-image">
+          <div class="overlay">
+            <div class="icon" data-position="24%, 20%" data-text="Singapore Polytechnic has 4 buildings T18A, T18B, T3B and the SP Sports Arena that have been certified with a Green Mark Platinum with on-going efforts to certify all 22 buildings in SP by 2025. Showing big efforts for the school as whole to transition into a sustainable place for all in." data-image="images/spccc.jpg"><i class="fa-solid fa-magnifying-glass fa-bounce fa-2xl" style="color: #256f16;"></i></div>
+            <div class="icon" data-position="17%, 24%" data-text="Here is the text for Icon 2." data-image="images/spccc.jpg"><i class="fa-solid fa-magnifying-glass fa-bounce fa-2xl" style="color: #256f16;"></i></div>
+            <div class="icon" data-position="26%, 36%" data-text="This is the text for Icon 3." data-image="images/spccc.jpg"><i class="fa-solid fa-magnifying-glass fa-bounce fa-2xl" style="color: #256f16;"></i></div>
+            <div class="icon" data-position="35%, 48%" data-text="Text for Icon 4 is displayed here." data-image="images/spccc.jpg"><i class="fa-solid fa-magnifying-glass fa-bounce fa-2xl" style="color: #256f16;"></i></div>
+            <div class="icon" data-position="44%, 60%" data-text="Icon 5 has its associated text here." data-image="images/spccc.jpg"><i class="fa-solid fa-magnifying-glass fa-bounce fa-2xl" style="color: #256f16;"></i></div>
+            <div class="icon" data-position="53%, 72%" data-text="And the text for Icon 6 is shown here." data-image="images/spccc.jpg"><i class="fa-solid fa-magnifying-glass fa-bounce fa-2xl" style="color: #256f16;"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class="text-container text-center">
+          <h3 id="text-display"></h3>
+          <div class="image-container">
+            <img class="img-fluid mt-3 rounded-3" id="image-display" src="" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const interactiveImage = document.getElementById("interactive-image");
+      const textDisplay = document.getElementById("text-display");
+      const imageDisplay = document.getElementById("image-display");
+      const icons = document.querySelectorAll(".icon");
+      let isImageExpanded = false;
+  
+      // Function to toggle image size
+      function toggleImageSize() {
+        if (isImageExpanded) {
+          interactiveImage.parentElement.classList.remove("active");
+        } else {
+          interactiveImage.parentElement.classList.add("active");
+        }
+        isImageExpanded = !isImageExpanded;
+      }
+  
+      // Add the 'initial-size' class to the interactive image on page load
+      interactiveImage.parentElement.classList.add("initial-size");
+  
+      icons.forEach((icon) => {
+        let isActive = false; // Track the state of each icon
+  
+        const position = icon.getAttribute("data-position").split(",");
+        const left = position[0];
+        const top = position[1];
+  
+        icon.style.left = left;
+        icon.style.top = top;
+  
+        icon.addEventListener("click", function() {
+          const text = icon.getAttribute("data-text");
+  
+          // Toggle the display of text and image on click
+          if (isActive) {
+            textDisplay.textContent = "";
+            imageDisplay.src = "";
+            imageDisplay.parentElement.style.display = "none";
+          } else {
+            textDisplay.textContent = text;
+  
+            // Hide the image container if no image is provided
+            if (icon.dataset.image) {
+              imageDisplay.src = icon.dataset.image;
+              imageDisplay.parentElement.style.display = "block";
+            } else {
+              imageDisplay.parentElement.style.display = "none";
+            }
+          }
+  
+          // Toggle the active state of the icon
+          isActive = !isActive;
+  
+          // Toggle the image size
+          toggleImageSize();
+        });
+      });
+  
+      // Add an event listener to the interactive image to toggle the image size
+      interactiveImage.addEventListener("click", function() {
+        if (isImageExpanded) {
+          interactiveImage.parentElement.classList.remove("active");
+        }
+        isImageExpanded = !isImageExpanded;
+      });
+    });
+  </script>
+
+<style>
+  /* New CSS styles for responsive icons */
+.icon {
+  position: absolute;
+  width: 3vmin; /* Use viewport units to make the icon size responsive */
+  height: 3vmin;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CSS styles to make the interactive image bigger */
+.interactive-image.active .img-fluid {
+  width: 120%; /* Adjust the value to make it bigger */
+  height: auto;
+}
+
+/* CSS styles to make the interactive image initial size */
+.interactive-image.initial-size .img-fluid {
+  width: 100%; /* Initial size */
+  height: auto;
+}
+</style>
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted pt-5">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with me on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+        <i class="me-4 fab fa-twitter"></i>
+        <i class="me-4 fab fa-google"></i>
+        <i class="me-4 fab fa-instagram"></i>
+        <i class="me-4 fab fa-linkedin"></i>
+        <i class="me-4 fab fa-github"></i>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-secondary"></i>Rejey's FED CA2P2
+          </h6>
+          <p>
+              Rejey's super high quality website! NO CAP!
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            How to Help
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Learn How</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Donate Here!</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Forms</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            About Me
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">My journey</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Learn More</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">My Goals</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i> Singapore Polytechnic</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            Rejey10.23@ichat.sp.edu.sg
+          </p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    &copy; 2023 Rejey Ezekiel
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+<script src="JS/hover.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  document.getElementsByClassName("confetti-btn")[0].addEventListener("click", () => {
+    confetti();
+  });
+</script>
+</body>
+</html>
